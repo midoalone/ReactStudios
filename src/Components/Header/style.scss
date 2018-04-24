@@ -1,0 +1,191 @@
+.bb-studios-nav {
+  padding-left: 80px;
+  background: #1c1c1c;
+
+  .nav-item {
+    margin-right: 30px;
+  }
+}
+
+.bb-header-icons {
+  background: url(images/icons.png) no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+  overflow: hidden;
+  margin-top: -1px;
+}
+
+.bb-header-logo {
+  background-color: #3d648b;
+  width: 45px;
+  height: 40px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  text-align: center;
+  line-height: 40px;
+}
+
+.bb-studios-logo {
+  background-position: 0 0;
+  width: 29px;
+  height: 29px;
+  display: inline-block;
+}
+
+.bb-icon-folder {
+  background-position: -32px 0;
+  width: 19px;
+  height: 16px;
+  margin-right: 15px;
+}
+
+.bb-icon-eye {
+  background-position: -66px -31px;
+  width: 24px;
+  height: 15px;
+  margin-right: 15px;
+}
+
+.bb-icon-arrow {
+  background-position: -32px -19px;
+  width: 11px;
+  height: 7px;
+  margin-left: 10px;
+}
+
+.bb-studio-select {
+  background-color: #3d538b;
+  border-radius: 0;
+  width: 100%;
+  height: 58px;
+  color: #fff;
+  text-align: left;
+  top: -10px;
+  position: absolute;
+
+  &:after {
+    float: right;
+    margin-top: 10px;
+  }
+
+  + .dropdown-menu {
+    width: 100%;
+    top: 45px;
+  }
+}
+
+.iconPlusGray {
+  background-position: -108px 0;
+  width: 18px;
+  height: 18px;
+  margin-top: -10px;
+}
+
+.iconFolderGray {
+  background-position: -129px 0;
+  width: 17px;
+  height: 15px;
+  margin-top: -9.5px;
+}
+
+.iconTickGray {
+  background-position: 0 -32px;
+  width: 19px;
+  height: 15px;
+  margin-top: -9.5px;
+}
+
+.iconSettingGray {
+  background-position: -22px -32px;
+  width: 18px;
+  height: 17px;
+  margin-top: -10.5px;
+}
+
+.iconBuilder {
+  background-position: -72px 0;
+  width: 33px;
+  height: 28px;
+  float: left;
+  margin-right: 20px;
+}
+
+a {
+  cursor: pointer;
+}
+
+.user-item {
+  margin-right: 0;
+
+  a {
+    padding: 0 7px;
+  }
+}
+
+img.avatar {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 2px solid #ffffff9e;
+  margin-right: 15px;
+}
+
+.rc-menu-horizontal {
+  background: transparent;
+  border: none;
+}
+
+.rc-menu-horizontal > .rc-menu-item, .rc-menu-horizontal > .rc-menu-submenu > .rc-menu-submenu-title {
+  padding: 0 10px;
+}
+
+li.rc-menu-submenu {
+  cursor: pointer;
+  color: #868686;
+}
+
+li.rc-menu-item {
+  cursor: pointer;
+}
+
+.rc-menu-horizontal > .rc-menu-submenu-active, .rc-menu-horizontal > .rc-menu-item-active {
+  border-bottom: none;
+  background-color: #3a3a3a;
+  color: inherit;
+}
+
+.rc-menu-submenu > .rc-menu {
+  background: #292929;
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+.rc-menu-vertical > .rc-menu-item, .rc-menu-vertical-left > .rc-menu-item, .rc-menu-vertical-right > .rc-menu-item, .rc-menu-inline > .rc-menu-item, .rc-menu-vertical > .rc-menu-submenu > .rc-menu-submenu-title, .rc-menu-vertical-left > .rc-menu-submenu > .rc-menu-submenu-title, .rc-menu-vertical-right > .rc-menu-submenu > .rc-menu-submenu-title, .rc-menu-inline > .rc-menu-submenu > .rc-menu-submenu-title {
+  padding: 3px 8px 3px 13px;
+}
+
+.rc-menu > .rc-menu-item-divider {
+  height: 0;
+}
+
+.rc-menu-item-active, .rc-menu-submenu-active > .rc-menu-submenu-title {
+  background: #3a3a3a;
+}
+
+.rc-menu-horizontal > .rc-menu-submenu, .rc-menu-horizontal > .rc-menu-item {
+  border: none;
+}
+
+.rc-menu-horizontal > .rc-menu-item, .rc-menu-horizontal > .rc-menu-submenu > .rc-menu-submenu-title {
+  background: #1c1c1c;
+}
+
+.rc-menu-item-selected {
+  background: #000000;
+}
+
+.rc-menu-submenu-selected {
+  background-color: transparent;
+}

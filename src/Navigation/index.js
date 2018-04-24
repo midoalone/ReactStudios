@@ -6,7 +6,7 @@ import SecondScreen from '../Containers/SecondScreen';
 const routes = () => (
   <Switch>
     <Route exact path='/' component={HomeScreen} />
-    <Route path='/second' component={SecondScreen} />
+    <Route path='/query_builder' component={SecondScreen} />
   </Switch>
 );
 

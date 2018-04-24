@@ -3,7 +3,8 @@ import { Provider } from 'react-redux'
 import { ConnectedRouter } from 'react-router-redux'
 import Root from './Root'
 import createStore from '../Redux'
-import './styles/App.css';
+import './styles/App.scss'
+import { hot } from 'react-hot-loader'
 
 const { store, history } = createStore()
 
@@ -19,4 +20,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default hot(module)(App);

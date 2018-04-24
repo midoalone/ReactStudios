@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
-import './styles/SecondScreen.css'
+import './styles/SecondScreen.scss'
 
 class SecondScreen extends Component {
   render () {
     return (
-      <div>Second Screen</div>
+      <div>Query Builder</div>
     )
   }
 }
