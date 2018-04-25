@@ -1,0 +1,124 @@
+@import "~@blueprintjs/core/lib/css/blueprint.css";
+@import "~@blueprintjs/icons/lib/css/blueprint-icons.css";
+
+:focus, .pt-control input:focus ~ .pt-control-indicator{
+  outline: none!important;
+}
+
+.Resizer {
+  background: #000;
+  opacity: .2;
+  z-index: 1;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding;
+  background-clip: padding-box;
+}
+
+.Resizer:hover {
+  -webkit-transition: all 2s ease;
+  transition: all 2s ease;
+}
+
+.Resizer.horizontal {
+  height: 11px;
+  margin: -5px 0;
+  border-top: 5px solid rgba(255, 255, 255, 0);
+  border-bottom: 5px solid rgba(255, 255, 255, 0);
+  cursor: row-resize;
+  width: 100%;
+}
+
+.Resizer.horizontal:hover {
+  border-top: 5px solid rgba(0, 0, 0, 0.5);
+  border-bottom: 5px solid rgba(0, 0, 0, 0.5);
+}
+
+.Resizer.vertical {
+  width: 11px;
+  margin: 0 -5px;
+  border-left: 5px solid rgba(255, 255, 255, 0);
+  border-right: 5px solid rgba(255, 255, 255, 0);
+  cursor: col-resize;
+}
+
+.Resizer.vertical:hover {
+  border-left: 5px solid rgba(0, 0, 0, 0.5);
+  border-right: 5px solid rgba(0, 0, 0, 0.5);
+}
+
+.Resizer.disabled {
+  cursor: not-allowed;
+}
+
+.Resizer.disabled:hover {
+  border-color: transparent;
+}
+
+.visual-editor {
+  height: 100%;
+  overflow: scroll;
+}
+
+.panel-checkbox {
+  margin-top: 12px;
+}
+
+.pt-tab-panel {
+  overflow-y: scroll;
+  height: 260px;
+}
+
+ul.nav.nav-tabs {
+  background: #f6f6f6;
+  margin: 0;
+}
+
+div#uncontrolled-tab-example {
+  display: flex;
+  flex-direction: column;
+}
+
+.ReactTable {
+  background: #f6f6f6;
+}
+
+.pt-dialog-header .pt-dialog-header-title {
+  user-select: none;
+}
+
+.pt-dialog{
+  padding: 0;
+  width: 250px;
+  float: left;
+  margin: 0 10px 0 0;
+}
+
+.pt-dialog-header .pt-dialog-header-title {
+  user-select: none;
+}
+
+.visual-editor {
+  height: 100%;
+
+  .tab-content {
+    flex: 1;
+    overflow-y: auto;
+  }
+
+  div#visual-results-tabs {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  div#visual-results-tabs-pane-1 {
+    flex: 1;
+  }
+}
+
+.selected-tables{
+  padding: 10px;
+}

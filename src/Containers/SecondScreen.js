@@ -4,7 +4,7 @@ import './styles/SecondScreen.scss'
 class SecondScreen extends Component {
   render () {
     return (
-      <div>Query Builder</div>
+      <div>Query </div>
     )
   }
 }

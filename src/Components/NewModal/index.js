@@ -33,7 +33,7 @@ class NewModal extends Component {
 
                     {this.props.studios.map((studio, index) => (
                         <TabPanel key={index} tabId={'New-Project-Tab-' + index}>
-                            <p>Content of {studio.title} Studio</p>
+                            <p>Content of {studio.title} studio</p>
                         </TabPanel>
                     ))}
                 </Tabs>

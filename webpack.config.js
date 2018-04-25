@@ -1,10 +1,14 @@
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require('path')
 
 const port = process.env.PORT || 3000;
 
 module.exports = {
     mode: 'development',
+    resolve: {
+        extensions: ['*', '.js', '.jsx', '.json']
+    },
     entry: ['babel-polyfill', './src/index.js'],
     output: {
         filename: 'bundle.[hash].js'
@@ -18,21 +22,43 @@ module.exports = {
                 use: ['babel-loader']
             },
             {
-                // Preprocess our own .css files
-                // This is the place to add your own loaders (e.g. sass/less etc.)
-                // for a list of loaders, see https://webpack.js.org/loaders/#styling
-                test: /\.scss$/,
-                exclude: /node_modules/,
-                use: ['style-loader', 'css-loader', 'sass-loader'],
+                test: /(\.css|\.scss|\.sass)$/,
+                use: [
+                    'style-loader',
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            sourceMap: true
+                        }
+                    }, {
+                        loader: 'postcss-loader',
+                        options: {
+                            plugins: () => [
+                                require('autoprefixer')
+                            ],
+                            sourceMap: true
+                        }
+                    }, {
+                        loader: 'sass-loader',
+                        options: {
+                            includePaths: [path.resolve(__dirname, 'src', 'scss')],
+                            sourceMap: true
+                        }
+                    }
+                ]
             },
             {
                 test: /\.less$/,
-                loader: 'less-loader' // compiles Less to CSS
-            },
-            {
-                test: /\.css$/,
-                include: /node_modules/,
-                use: ['style-loader', 'css-loader'],
+                use: [{
+                    loader: "style-loader" // creates style nodes from JS strings
+                }, {
+                    loader: "css-loader" // translates CSS into CommonJS
+                }, {
+                    loader: "less-loader",
+                    options: {
+                        javascriptEnabled: true
+                    }
+                }]
             },
             {
                 test: /\.(eot|svg|otf|ttf|woff|woff2)$/,
@@ -75,16 +101,17 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             template: 'public/index.html',
-            favicon: 'public/favicon.ico'
+            minify: {
+                removeComments: true,
+                collapseWhitespace: true
+            },
+            inject: true
         }),
         new webpack.NamedModulesPlugin(),
         new webpack.HotModuleReplacementPlugin()
     ],
     devServer: {
-        host: 'localhost',
-        port: port,
-        historyApiFallback: true,
-        open: true,
+        inline: true,
         hot: true
     }
 };

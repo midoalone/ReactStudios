@@ -15,7 +15,7 @@ class Root extends Component {
                     <NavLink to="/query_builder" >Query Builder</NavLink>
                 </div>
 
-                <div style={{flex: 1, backgroundColor: '#232529', color: '#fff'}}>
+                <div className='d-flex flex-column' style={{flex: 1, backgroundColor: '#232529'}}>
                     <Routes/>
                 </div>
             </div>
